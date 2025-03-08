@@ -2,6 +2,6 @@
 
 echo "Enetr username"
 
-read USERNAME 
+read -s USERNAME 
 
 echo "enetred user name is $USERNAME"
