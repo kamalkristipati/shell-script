@@ -7,22 +7,58 @@ then
    echo " You must have root access to install"
    exit 1
 fi
-dnf install mysql -y
 
-if [ $? -ne 0 ]
-then
-    echo "Failure in stallation"
-    exit 1
+dnf list installed mysql
+if [$? -ne 0 ]
+then 
+   echo "Mysql not installed...installing Mysql "
+    dnf install mysql -y
+    if [ $? -ne 0 ]
+    then 
+        echo "installation Failre"
+        exit 1
+    else
+    echo "installing mysql ...installation success"
+    fi 
 else 
-    echo "installation success"
-fi 
+   echo "My sql is already installed"
 
-dnf install git -y 
+
+
+
+#if [ $? -ne 0 ]
+#then
+#    echo "Failure in stallation"
+#    exit 1
+#else 
+#    echo "installation success"
+#fi 
+
+dnf list installed mysql 
 
 if [ $? -ne 0 ]
-then
-    echo "installation failed"
-    exit 1
+then 
+    echo "Installing Git ..."
+    dnf install git -y 
+    if [ $? -ne 0 ]
+    then 
+        echo "installation failure"
+        exit 1
+    else 
+        echo "installation success"
+    fi
 else
-    echo "installation success"
-fi 
+   echo "Git is already installed"
+fi
+
+
+
+#nf install git -y 
+
+#f [ $? -ne 0 ]
+#hen
+#   echo "installation failed"
+#   exit 1
+#lse
+#   echo "installation success"
+#i 
