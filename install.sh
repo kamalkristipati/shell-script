@@ -22,19 +22,9 @@ then
     fi 
 else 
    echo "My sql is already installed"
+fi
 
-
-
-
-#if [ $? -ne 0 ]
-#then
-#    echo "Failure in stallation"
-#    exit 1
-#else 
-#    echo "installation success"
-#fi 
-
-dnf list installed mysql 
+dnf list installed git 
 
 if [ $? -ne 0 ]
 then 
@@ -50,15 +40,3 @@ then
 else
    echo "Git is already installed"
 fi
-
-
-
-#nf install git -y 
-
-#f [ $? -ne 0 ]
-#hen
-#   echo "installation failed"
-#   exit 1
-#lse
-#   echo "installation success"
-#i 
