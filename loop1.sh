@@ -2,5 +2,5 @@
 
 for i in {0..5000}
 do 
-  echo $i
+  echo $i >> log.txt 
 done
