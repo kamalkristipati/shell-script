@@ -7,7 +7,7 @@ then
    echo " You must have root access to install"
    exit 1
 fi
-dnf install mysqll -y
+dnf install mysql -y
 
 if [ $? -ne 0 ]
 then
@@ -24,5 +24,5 @@ then
     echo "installation failed"
     exit 1
 else
-    echo "installation success
+    echo "installation success"
 fi 
